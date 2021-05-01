@@ -17,11 +17,11 @@ public class InfixToPosfix {
         data = val;
         next = null;
     }
-    //Class inPost
-    public static class inPost {
+    //Class InPost
+    public static class InPost {
         private InfixToPosfix top;
-        //Method inPost
-        public inPost(){
+        //Method InPost
+        public InPost(){
             top = null;
         }
         //Method Empty
@@ -48,7 +48,7 @@ public class InfixToPosfix {
         //Method Postfix
         public void postfix(String n) {
             StringBuilder output = new StringBuilder("");
-            inPost value = new inPost();
+            InPost value = new InPost();
             for (int i = 0; i < n.length(); i++) {
                 char c = n.charAt(i);
                 if (c == ('+') || c == ('*') || c == ('-') || c == ('/')) {
@@ -81,7 +81,7 @@ public class InfixToPosfix {
         //Method Main
         public static void main(String[] args) {
             Scanner in = new Scanner(System.in);
-            inPost post = new inPost();
+            InPost post = new InPost();
             System.out.println("------------------------------------------");
             System.out.print("Inputkan Notasi Infix\t: ");
             String input = in.nextLine();
