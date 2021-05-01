@@ -9,17 +9,17 @@ Code was Writen by Kelompok 7
 */
 
 import java.util.Scanner;
-public class InfixToPosfix {
+public class InfixToPostfix {
     public Object data;
-    public InfixToPosfix next;
+    public InfixToPostfix next;
     //Method untuk Konversi Infix ke Postfix
-    public InfixToPosfix(Object val) {
+    public InfixToPostfix(Object val) {
         data = val;
         next = null;
     }
     //Class InPost
     public static class InPost {
-        private InfixToPosfix top;
+        private InfixToPostfix top;
         //Method InPost
         public InPost(){
             top = null;
@@ -30,7 +30,7 @@ public class InfixToPosfix {
         }
         //Method Push
         public void push(Object e) {
-            InfixToPosfix temp = new InfixToPosfix(e);
+            InfixToPostfix temp = new InfixToPostfix(e);
             temp.next = top;
             top = temp;
         }
